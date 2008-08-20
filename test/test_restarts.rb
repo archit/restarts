@@ -56,6 +56,16 @@ class RestartsTest < Test::Unit::TestCase
     assert !@ex.restart1_used
     assert @ex.restart2_used
   end
+  
+  def test_alternative_syntax
+    begin
+      @ex.i_will_raise_a_condition
+    rescue ExampleError
+      $!.restart(:restart1)
+    end
+    
+    assert @ex.restart1_used
+  end
 end
 
 # vim: syntax=Ruby

@@ -31,7 +31,7 @@ end
 begin
   do_stuff()
 rescue MyException
-  $!.restart.call(:ID1) if (boolean expression inolving $! data)
+  $!.restart(:ID1) if (boolean expression inolving $! data)
 end
 
 == REQUIREMENTS:
