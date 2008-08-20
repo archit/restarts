@@ -1,3 +1,13 @@
+=== 1.0.2 / 2008-08-21
+
+* 1 minor enhancement
+  * Fixed up the ri/rdoc
+
+=== 1.0.1 / 2008-08-21
+
+* 1 minor enhancement
+  * Added syntax for directly calling the #restart method with a restart id
+
 === 1.0.0 / 2008-08-21
 
 * 1 major enhancement

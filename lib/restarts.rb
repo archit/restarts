@@ -4,12 +4,16 @@
 # Refer to README.txt for more info
 
 module Restarts
-  VERSION = '1.0.1'
+  VERSION = '1.0.2'
 end
 
 module Kernel
-  # FIXME: Find a way to have it part of Restarts module, but mixed-into Kernel
-  # Don't even know if thats a better way to do it.
+  # Similar to the standard Kernel#raise command. Allows you to throw exceptions
+  # The benefit is though that using raise_with_restarts adds the infrastructure
+  # so that the rescue code can tell the exception to restart and recover from
+  # a specific point.
+  #
+  # See README.txt for example
   def raise_with_restarts(condition)
     restart = callcc do |cc|
       # Have the continuation object accessible via the #restart method.
