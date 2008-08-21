@@ -1,6 +1,8 @@
 = restarts
 
-http://github.com/archit/restarts/tree/master
+latest code is available at http://github.com/archit/restarts/tree/master
+
+latest documentation is available at http://ore.rubyforge.org/restarts
 
 == DESCRIPTION:
 
@@ -40,7 +42,7 @@ None whatsoever
 
 == INSTALL:
 
-sudo gem install restarts
+gem install restarts
 
 == LICENSE:
 
