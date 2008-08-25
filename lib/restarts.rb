@@ -18,12 +18,13 @@ module Kernel
     restart = callcc do |cc|
       # Have the continuation object accessible via the #restart method.
       # FIXME: check for pre defined methods by the name "restart".
-      (class <<condition; self; end).class_eval do
-        define_method(:restart) do |*id|
-          if id.empty?
-            return cc
+      condition.instance_variable_set(:@cc, cc)
+      condition.instance_eval do
+        def restart(id=nil)
+          if id.nil?
+            return @cc
           else
-            return cc.call(id[0])
+            return @cc.call(id[0])
           end
         end
       end
