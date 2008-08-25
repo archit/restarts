@@ -4,7 +4,7 @@
 # Refer to README.txt for more info
 
 module Restarts
-  VERSION = '1.0.2'
+  VERSION = '1.0.3'
 end
 
 module Kernel
