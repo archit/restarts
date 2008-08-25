@@ -24,7 +24,7 @@ module Kernel
           if id.nil?
             return @cc
           else
-            return @cc.call(id[0])
+            return @cc.call(id)
           end
         end
       end
